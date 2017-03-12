@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import ViewStore from './stores/ViewStore';
-import TodoApp from './components/todoApp';
+import { render } from 'react-dom';
+import AppState from './AppState';
+import App from './App';
 
-ReactDOM.render(
-  <TodoApp viewStore={ViewStore} />,
+const appState = new AppState();
+
+render(
+  <App appState={appState} />,
   document.getElementById('root'),
 );
